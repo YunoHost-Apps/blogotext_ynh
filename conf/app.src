@@ -1,6 +1,6 @@
-SOURCE_URL=https://api.github.com/repos/Blogotext/blogotext/tarball
-SOURCE_SUM=a6e72874fb0266847802a611312f93f83da56dec334e16c3fe5c3838d636279d
+SOURCE_URL=https://api.github.com/repos/BlogoText/blogotext/tarball/3.7.6
+SOURCE_SUM=6f2e769ed62589cf56a9d26785916d5147c6ca0e60befeeaa709b077e0185f5a
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=blogotext.tar.gz
+SOURCE_FILENAME=

@@ -1,26 +1,27 @@
 {
-    "name": "Blogotext",
+    "name": "BlogoText",
     "id": "blogotext",
     "packaging_format": 1,
     "description": {
-        "en": "The lightweight SQLite Blog-Engine and CMS.",
-        "fr": "Un moteur de contenu et de blog léger basé sur SQLite"
+        "en": "This is BlogoText, the lightweight Blog-Engine.",
+	"fr": "Ceci est BlogoText, un moteur de blog léger."
     },
-    "version": "1.0",
+    "version": "3.7.6",
     "url": "https://blogotext.org/",
     "license": "MIT",
     "maintainer": {
-        "name": "thuban",
-        "email": "thuban@yeuxdelibad.net",
-        "url": "https://yeuxdelibad.net"
+        "name": "antoine",
+        "email": "antoine@miaou.org",
+        "url": "https://miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 2.7.2"
+        "yunohost": ">= 3.4"
     },
     "multi_instance": true,
     "services": [
         "nginx",
-        "php5-fpm"
+        "php7.0-fpm",
+        "mysql"
     ],
     "arguments": {
         "install" : [
@@ -28,8 +29,8 @@
                 "name": "domain",
                 "type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for blogotext",
-                    "fr": "Choisissez un nom de domaine pour blogotext"
+                    "en": "Choose a domain name for BlogoText",
+                    "fr": "Choisissez un nom de domaine pour BlogoText"
                 },
                 "example": "example.com"
             },
@@ -37,11 +38,11 @@
                 "name": "path",
                 "type": "path",
                 "ask": {
-                    "en": "Choose a path for blogotext",
-                    "fr": "Choisissez un chemin pour blogotext"
+                    "en": "Choose a path for BlogoText",
+                    "fr": "Choisissez un chemin pour BlogoText"
                 },
-                "example": "/example",
-                "default": "/example"
+                "example": "/blog",
+                "default": "/blog"
             },
             {
                 "name": "admin",
@@ -50,7 +51,7 @@
                     "en": "Choose an admin user",
                     "fr": "Choisissez l’administrateur"
                 },
-                "example": "batman"
+                "example": "johndoe"
             },
             {
                 "name": "is_public",
@@ -63,12 +64,21 @@
             },
             {
                 "name": "language",
+                "type": "string",
                 "ask": {
                     "en": "Choose the application language",
                     "fr": "Choisissez la langue de l'application"
                 },
                 "choices": ["fr", "en"],
                 "default": "fr"
+            },
+            {
+                "name": "password",
+                "type": "password",
+                "ask": {
+                    "en": "Set the administrator password",
+                    "fr": "Définissez le mot de passe administrateur"
+             }
             }
         ]
     }
