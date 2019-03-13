@@ -3,8 +3,8 @@
 ![blogotext_logo](sources/images/blogotext_logo.png)
 
 
-[![Integration level](https://dash.yunohost.org/integration/BlogoText.svg)](https://dash.yunohost.org/appci/app/BlogoText)  
-[![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=BlogoText)
+[![Integration level](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext)  
+[![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
@@ -43,9 +43,9 @@ Can the app be used by multiple users? no
 
 #### Supported architectures
 
-* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/BlogoText%20%28Community%29.svg)](https://ci-apps.yunohost.org/ci/apps/BlogoText/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/BlogoText%20%28Community%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/BlogoText/)
-* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/BlogoText%20%28Community%29.svg)](https://ci-stretch.nohost.me/ci/apps/BlogoText/)
+* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/blogotext%20%28Community%29.svg)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/blogotext%20%28Community%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/blogotext/)
+* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/blogotext%20%28Community%29.svg)](https://ci-stretch.nohost.me/ci/apps/blogotext/)
 
 ## Limitations
 
@@ -76,5 +76,5 @@ To try the testing branch, please proceed like that.
 ```
 sudo yunohost app install https://github.com/YunoHost-Apps/BlogoText_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade BlogoText -u https://github.com/YunoHost-Apps/BlogoText_ynh/tree/testing --debug
+sudo yunohost app upgrade blogotext -u https://github.com/YunoHost-Apps/BlogoText_ynh/tree/testing --debug
 ```
