@@ -2,8 +2,12 @@
 
 ![blogotext_logo](sources/images/blogotext_logo.png)
 
+[
+![](https://dash.yunohost.org/integration/blogotext.svg)
+![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg)
+![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+](https://dash.yunohost.org/appci/app/blogotext)
 
-[![Integration level](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext)  
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Read this readme in english.](./README.md)* 
