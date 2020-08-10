@@ -3,8 +3,8 @@
     "id": "blogotext",
     "packaging_format": 1,
     "description": {
-        "en": "This is BlogoText, the lightweight Blog-Engine.",
-	"fr": "Ceci est BlogoText, un moteur de blog léger."
+        "en": "Lightweight Blog-Engine.",
+	"fr": "Un moteur de blog léger."
     },
     "version": "3.7.6",
     "url": "https://blogotext.org/",
