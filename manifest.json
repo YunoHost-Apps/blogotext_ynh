@@ -6,7 +6,7 @@
         "en": "Lightweight Blog-Engine.",
 	"fr": "Un moteur de blog léger."
     },
-    "version": "3.7.6",
+    "version": "3.7.6~ynh1",
     "url": "https://blogotext.org/",
     "license": "MIT",
     "maintainer": {
