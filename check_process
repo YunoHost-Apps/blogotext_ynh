@@ -20,7 +20,8 @@
 		setup_private=1
 		setup_public=1
 		upgrade=1
-		#upgrade=1	from_commit=CommitHash
+		#3.7.6~ynh1
+		upgrade=1	from_commit=e49200ad7f98acba70737dc7db314c51a2a07802
 		backup_restore=1
 		multi_instance=1
 		incorrect_path=1
@@ -43,7 +44,7 @@
 Email=
 Notification=none
 ;;; Upgrade options
-	; commit=CommitHash
-		name=Name and date of the commit.
-		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=pass&port=666&
+	; commit=e49200ad7f98acba70737dc7db314c51a2a07802
+		name=3.7.6~ynh1(11oct2020)
+		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=password1234&port=666&
 
