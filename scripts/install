@@ -13,11 +13,6 @@ source /usr/share/yunohost/helpers
 # MANAGE SCRIPT FAILURE
 #=================================================
 
-ynh_clean_setup () {
-	### Remove this function if there's nothing to clean before calling the remove script.
-	true
-}
-# Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
 
 #=================================================
@@ -56,46 +51,14 @@ ynh_app_setting_set $app is_public $is_public
 ynh_app_setting_set $app language $language
 
 #=================================================
-# STANDARD MODIFICATIONS
-#=================================================
-# FIND AND OPEN A PORT
-#=================================================
-ynh_script_progression --message="Configuring firewall..."
-
-### Use these lines if you have to open a port for the application
-### `ynh_find_port` will find the first available port starting from the given port.
-### If you're not using these lines:
-###		- Remove the section "CLOSE A PORT" in the remove script
-
-# Find a free port
-#port=$(ynh_find_port 8095)
-# Open this port
-#ynh_exec_warn_less yunohost firewall allow --no-upnp TCP $port
-#ynh_app_setting_set $app port $port
-
-#=================================================
-# INSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Installing dependencies..."
-
-### `ynh_install_app_dependencies` allows you to add any "apt" dependencies to the package.
-### Those deb packages will be installed as dependencies of this package.
-### If you're not using this helper:
-###		- Remove the section "REMOVE DEPENDENCIES" in the remove script
-###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
-###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
-
-#ynh_install_app_dependencies deb1 deb2
-
-#=================================================
 # CREATE A MYSQL DATABASE
 #=================================================
 ynh_script_progression --message="Creating a MySQL database..."
 
 db_name=$(ynh_sanitize_dbid $app)
 db_user=$db_name
-ynh_app_setting_set $app db_name $db_name
-ynh_mysql_setup_db $db_user $db_name
+ynh_app_setting_set --app=$app --key=db_name --value=$db_name
+ynh_mysql_setup_db --db_user=$db_name --db_name=$db_name
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -109,7 +72,7 @@ ynh_setup_source "$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring nginx web server..."
+ynh_script_progression --message="Configuring NGINXweb server..."
 
 # Create a dedicated nginx config
 ynh_add_nginx_config
@@ -128,26 +91,8 @@ ynh_system_user_create $app
 ynh_script_progression --message="Configuring php-fpm..."
 
 # Create a dedicated php-fpm config
-ynh_add_fpm_config
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression --message="Configuring a systemd service..."
-
-### `ynh_systemd_config` is used to configure a systemd script for an app.
-### It can be used for apps that use sysvinit (with adaptation) or systemd.
-### Have a look at the app to be sure this app needs a systemd script.
-### `ynh_systemd_config` will use the file conf/systemd.service
-### If you're not using these lines:
-###		- You can remove those files in conf/.
-###		- Remove the section "BACKUP SYSTEMD" in the backup script
-###		- Remove also the section "STOP AND REMOVE SERVICE" in the remove script
-###		- As well as the section "RESTORE SYSTEMD" in the restore script
-###		- And the section "SETUP SYSTEMD" in the upgrade script
-
-# Create a dedicated systemd config
-#ynh_add_systemd_config
+ynh_add_fpm_config --package="$extra_php_dependencies"
+phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # SETUP APPLICATION WITH CURL
@@ -189,83 +134,31 @@ then
 fi
 
 #=================================================
-# MODIFY A CONFIG FILE
-#=================================================
-
-### `ynh_replace_string` is used to replace a string in a file.
-### (It's compatible with sed regular expressions syntax)
-
-#ynh_replace_string "match_string" "replace_string" "$final_path/CONFIG_FILE"
-
-#=================================================
-# STORE THE CONFIG FILE CHECKSUM
-#=================================================
-
-### `ynh_store_file_checksum` is used to store the checksum of a file.
-### That way, during the upgrade script, by using `ynh_backup_if_checksum_is_different`,
-### you can make a backup of this file before modifying it again if the admin had modified it.
-
-# Calculate and store the config file checksum into the app settings
-#ynh_store_file_checksum "$final_path/CONFIG_FILE"
-
-#=================================================
 # GENERIC FINALIZATION
 #=================================================
 # SECURE FILES AND DIRECTORIES
 #=================================================
 
 # Set permissions to app files
-chown -R root: $final_path
-chown -R $app:$app $final_path #modif perso
-
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Configuring log rotation..."
-
-### `ynh_use_logrotate` is used to configure a logrotate configuration for the logs of this app.
-### Use this helper only if there is effectively a log file for this app.
-### If you're not using this helper:
-###		- Remove the section "BACKUP LOGROTATE" in the backup script
-###		- Remove also the section "REMOVE LOGROTATE CONFIGURATION" in the remove script
-###		- As well as the section "RESTORE THE LOGROTATE CONFIGURATION" in the restore script
-###		- And the section "SETUP LOGROTATE" in the upgrade script
-
-# Use logrotate to manage application logfile(s)
-#ynh_use_logrotate
-
-#=================================================
-# ADVERTISE SERVICE IN ADMIN PANEL
-#=================================================
-
-### `yunohost service add` is a CLI yunohost command to add a service in the admin panel.
-### You'll find the service in the 'services' section of YunoHost admin panel.
-### This CLI command would be useless if the app does not have any services (systemd or sysvinit)
-### If you're not using these lines:
-###		- You can remove these files in conf/.
-###		- Remove the section "REMOVE SERVICE FROM ADMIN PANEL" in the remove script
-###		- As well as the section "ADVERTISE SERVICE IN ADMIN PANEL" in the restore script
-
-#yunohost service add $app --log "/var/log/$app/$app.log"
-# if using yunohost version 3.2 or more in the 'manifest.json', a description can be added
-#yunohost service add $app --description "$app daemon for XXX" --log "/var/log/$app/$app.log"
+chown -R $app: $final_path #modif perso
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring SSOwat..."
 
-# Make app public if necessary
+# Make app public if necessary or protect it
 if [ $is_public -eq 1 ]
 then
-	# unprotected_uris allows SSO credentials to be passed anyway.
-	ynh_app_setting_set $app unprotected_uris "/"
+	# Everyone can access the app.
+	# The "main" permission is automatically created before the install script.
+	ynh_permission_update --permission "main" --add "visitors"
 fi
 
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..."
+ynh_script_progression --message="Reloading NGINX web server..."
 
 systemctl reload nginx
 
