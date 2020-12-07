@@ -122,21 +122,15 @@ ynh_local_curl "/admin/install.php?s=2&l=$language" "identifiant=$admin" "mdp=$p
 #page 3
 ynh_local_curl "/admin/install.php?s=3&l=$language" "sgdb=mysql" "mysql_user=$db_user" "mysql_passwd=$db_pwd" "mysql_db=$db_name" "mysql_host=localhost" "langue=$language" "install_form_3_sended=1"
 
-# Remove the public access
-if [ $is_public -eq 0 ]
-then
-	ynh_permission_update --permission "main" --remove "visitors"
-fi
-
 #=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring SSOwat..."
 
 # Make app public if necessary or protect it
-if [ $is_public -eq 1 ]
+if [ $is_public -eq 0 ]
 then
-	ynh_permission_update --permission "main" --add "visitors"
+	ynh_permission_update --permission "main" --remove "visitors"
 fi
 
 #=================================================
