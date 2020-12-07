@@ -16,7 +16,7 @@ Ceci est BlogoText, un moteur de blog léger.
 
 ## Captures d'écran
 
-![blogotext_preview](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
+![](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
 
 ## Démo
 
@@ -29,14 +29,14 @@ Comment configurer cette application: via le panneau d'administration `https://d
 ## Documentation
 
  * Documentation officielle : https://github.com/BlogoText/blogotext/wiki
- * Documentation YunoHost : https://yunohost.org/#/app_blogotext
+ * Documentation YunoHost : https://yunohost.org/#/app_blogotext_fr
 
 ## Caractéristiques spécifiques YunoHost
 
 #### Support multi-utilisateurs
 
- * L'authentification LDAP et HTTP est-elle prise en charge? non  
- * L'application peut-elle être utilisée par plusieurs utilisateurs?  non
+ * L'authentification LDAP et HTTP est-elle prise en charge ? **Non**  
+ * L'application peut-elle être utilisée par plusieurs utilisateurs ?  **Non**
 
 #### Supported architectures
 
@@ -55,6 +55,7 @@ Comment configurer cette application: via le panneau d'administration `https://d
 
  * Signaler un bug : https://github.com/YunoHost-Apps/BlogoText_ynh/issues
  * Site de l'application : https://blogotext.org/
+ * Dépôt de l'application principale : https://github.com/BlogoText/blogotext
  * Site web YunoHost : https://yunohost.org/
 
 ---

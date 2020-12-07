@@ -16,7 +16,7 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ## Screenshots
 
-![blogotext_preview](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
+![](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
 
 ## Demo
 
@@ -35,8 +35,8 @@ How to configure this app: by the admin panel `https://domain.tld/admin`.
 
 #### Multi-users support
 
- * Are LDAP and HTTP auth supported? no   
- * Can the app be used by multiple users? no  
+ * Are LDAP and HTTP auth supported? **No**   
+ * Can the app be used by multiple users? **No** 
 
 #### Supported architectures
 
@@ -55,6 +55,7 @@ How to configure this app: by the admin panel `https://domain.tld/admin`.
 
  * Report a bug: https://github.com/YunoHost-Apps/BlogoText_ynh/issues
  * App website: https://blogotext.org/
+ * Upstream app repository: https://github.com/BlogoText/blogotext
  * YunoHost website: https://yunohost.org/
 
 ---
