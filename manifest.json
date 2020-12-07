@@ -4,9 +4,9 @@
     "packaging_format": 1,
     "description": {
         "en": "Lightweight Blog-Engine.",
-	"fr": "Un moteur de blog léger."
+	"fr": "Moteur de blog léger."
     },
-    "version": "3.7.6~ynh2",
+    "version": "3.7.6~ynh3",
     "url": "https://blogotext.org/",
     "license": "MIT",
     "maintainer": {
@@ -15,7 +15,7 @@
         "url": "https://miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 3.4"
+        "yunohost": ">= 4.0.0"
     },
     "multi_instance": true,
     "services": [
@@ -42,7 +42,7 @@
                     "fr": "Choisissez un chemin pour BlogoText"
                 },
                 "example": "/blog",
-                "default": "/blog"
+                "default": "/blogotext"
             },
             {
                 "name": "admin",
@@ -78,7 +78,12 @@
                 "ask": {
                     "en": "Set the administrator password",
                     "fr": "Définissez le mot de passe administrateur"
-             }
+                },
+                "help": {
+                    "en": "Use the help field to add an information for the admin about this question.",
+                    "fr": "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+                },
+                "example": "Choose a password"
             }
         ]
     }
