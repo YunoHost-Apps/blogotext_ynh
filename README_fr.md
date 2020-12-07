@@ -1,7 +1,5 @@
 # BlogoText pour YunoHost
 
-![blogotext_logo](sources/images/blogotext_logo.png)
-
 [![](https://dash.yunohost.org/integration/blogotext.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)](https://dash.yunohost.org/appci/app/blogotext)  
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
 
@@ -18,7 +16,7 @@ Ceci est BlogoText, un moteur de blog léger.
 
 ## Captures d'écran
 
-![blogotext_preview](sources/images/blogotext_preview.png)
+![blogotext_preview](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
 
 ## Démo
 

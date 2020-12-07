@@ -1,7 +1,6 @@
 # BlogoText for YunoHost
 
-[
-![](https://dash.yunohost.org/integration/blogotext.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)](https://dash.yunohost.org/appci/app/blogotext)  
+[![](https://dash.yunohost.org/integration/blogotext.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)](https://dash.yunohost.org/appci/app/blogotext)  
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -17,7 +16,7 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ## Screenshots
 
-![blogotext_preview](sources/images/blogotext_preview.png)
+![blogotext_preview](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
 
 ## Demo
 
