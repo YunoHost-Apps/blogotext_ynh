@@ -1,13 +1,6 @@
 # BlogoText pour YunoHost
 
-![blogotext_logo](sources/images/blogotext_logo.png)
-
-[
-![](https://dash.yunohost.org/integration/blogotext.svg)
-![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg)
-![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
-](https://dash.yunohost.org/appci/app/blogotext)
-
+[![](https://dash.yunohost.org/integration/blogotext.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)](https://dash.yunohost.org/appci/app/blogotext)  
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Read this readme in english.](./README.md)* 
@@ -19,11 +12,11 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Ceci est BlogoText, un moteur de blog léger.
 
-**Version incluse:** 3.7.6
+**Version incluse :** 3.7.6
 
 ## Captures d'écran
 
-![blogotext_preview](sources/images/blogotext_preview.png)
+![](https://raw.githubusercontent.com/BlogoText/blogotext/dev/preview.png)
 
 ## Démo
 
@@ -35,21 +28,20 @@ Comment configurer cette application: via le panneau d'administration `https://d
 
 ## Documentation
 
- * Documentation officielle: https://github.com/BlogoText/blogotext/wiki
- * Documentation YunoHost: https://yunohost.org/#/app_blogotext
+ * Documentation officielle : https://github.com/BlogoText/blogotext/wiki
+ * Documentation YunoHost : https://yunohost.org/#/app_blogotext_fr
 
 ## Caractéristiques spécifiques YunoHost
 
 #### Support multi-utilisateurs
 
-L'authentification LDAP et HTTP est-elle prise en charge? non  
-L'application peut-elle être utilisée par plusieurs utilisateurs?  non
+ * L'authentification LDAP et HTTP est-elle prise en charge ? **Non**  
+ * L'application peut-elle être utilisée par plusieurs utilisateurs ?  **Non**
 
 #### Supported architectures
 
-* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/blogotext%20%28Community%29.svg)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/blogotext%20%28Community%29.svg)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
 * ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/blogotext%20%28Community%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/blogotext/)
-* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/blogotext%20%28Community%29.svg)](https://ci-stretch.nohost.me/ci/apps/blogotext/)
 
 ## Limitations
 
@@ -59,21 +51,17 @@ L'application peut-elle être utilisée par plusieurs utilisateurs?  non
 
 * Autres informations à ajouter sur cette application
 
-**Plus d'informations sur la page de documentation:**  
-https://yunohost.org/packaging_apps
-
 ## Links
 
- * Signaler un bug: https://github.com/YunoHost-Apps/BlogoText_ynh/issues
- * Site de l'application: https://blogotext.org/
- * Site web YunoHost: https://yunohost.org/
+ * Signaler un bug : https://github.com/YunoHost-Apps/BlogoText_ynh/issues
+ * Site de l'application : https://blogotext.org/
+ * Dépôt de l'application principale : https://github.com/BlogoText/blogotext
+ * Site web YunoHost : https://yunohost.org/
 
 ---
 
-Informations pour les développeurs
-----------------
+## Informations pour les développeurs
 
-**Seulement si vous voulez utiliser une branche de test pour le codage, au lieu de fusionner directement dans la banche principale.**
 Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/BlogoText_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
