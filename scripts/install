@@ -72,7 +72,7 @@ ynh_setup_source "$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring NGINXweb server..."
+ynh_script_progression --message="Configuring NGINX web server..."
 
 # Create a dedicated nginx config
 ynh_add_nginx_config
@@ -88,35 +88,31 @@ ynh_system_user_create $app
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring php-fpm..."
+ynh_script_progression --message="Configuring PHP-FPM..."
 
-# Create a dedicated php-fpm config
+# Create a dedicated PHP-FPM config
 ynh_add_fpm_config --package="$extra_php_dependencies"
 phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
+
+#=================================================
+# SECURE FILES AND DIRECTORIES
+#=================================================
+
+# Set permissions to app files
+chown -R $app: $final_path #modif perso
 
 #=================================================
 # SETUP APPLICATION WITH CURL
 #=================================================
 
-### Use these lines only if the app installation needs to be finalized through
-### web forms. We generally don't want to ask the final user,
-### so we're going to use curl to automatically fill the fields and submit the
-### forms.
+# Set the app as temporarily public for cURL call
+ynh_permission_update --permission "main" --add "visitors"
 
-# Set right permissions for curl install
-chown -R $app: $final_path
+# Reload NGINX
+ynh_systemd_action --service_name=nginx --action=reload
 
-# Set the app as temporarily public for curl call
-ynh_print_info "Configuring SSOwat..."
-ynh_app_setting_set $app skipped_uris "/"
-# Reload SSOwat config
-yunohost app ssowatconf
+ynh_script_progression --message="Finalizing installation..."
 
-# Reload Nginx
-systemctl reload nginx
-
-# Installation with curl
-ynh_print_info "Finalizing installation..."
 #ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
 # =========== modif perso ===========
 #page 1
@@ -125,22 +121,12 @@ ynh_local_curl "/admin/install.php" "install_form_1_sended=1" "langue=$language"
 ynh_local_curl "/admin/install.php?s=2&l=$language" "identifiant=$admin" "mdp=$password" "racine=https://$domain$path_url/" "comm_defaut_status=1" "langue=$language" "install_form_2_sended=1"
 #page 3
 ynh_local_curl "/admin/install.php?s=3&l=$language" "sgdb=mysql" "mysql_user=$db_user" "mysql_passwd=$db_pwd" "mysql_db=$db_name" "mysql_host=localhost" "langue=$language" "install_form_3_sended=1"
-# =========== modif perso ===========
 
 # Remove the public access
 if [ $is_public -eq 0 ]
 then
-	ynh_app_setting_delete $app skipped_uris
+	ynh_permission_update --permission "main" --remove "visitors"
 fi
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SECURE FILES AND DIRECTORIES
-#=================================================
-
-# Set permissions to app files
-chown -R $app: $final_path #modif perso
 
 #=================================================
 # SETUP SSOWAT
@@ -150,8 +136,6 @@ ynh_script_progression --message="Configuring SSOwat..."
 # Make app public if necessary or protect it
 if [ $is_public -eq 1 ]
 then
-	# Everyone can access the app.
-	# The "main" permission is automatically created before the install script.
 	ynh_permission_update --permission "main" --add "visitors"
 fi
 
@@ -160,7 +144,7 @@ fi
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server..."
 
-systemctl reload nginx
+ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

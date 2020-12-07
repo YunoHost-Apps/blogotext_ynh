@@ -77,9 +77,9 @@ ynh_setup_source "$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading nginx web server configuration..."
+ynh_script_progression --message="Upgrading NGINX web server configuration..."
 
-# Create a dedicated nginx config
+# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 #=================================================
@@ -93,9 +93,9 @@ ynh_system_user_create $app
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading php-fpm configuration..."
+ynh_script_progression --message="Upgrading PHP-FPM configuration..."
 
-# Create a dedicated php-fpm config
+# Create a dedicated PHP-FPM config
 ynh_add_fpm_config
 
 #=================================================
