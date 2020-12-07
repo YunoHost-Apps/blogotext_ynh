@@ -22,18 +22,6 @@ db_user=$db_name
 final_path=$(ynh_app_setting_get $app final_path)
 
 #=================================================
-# STANDARD REMOVE
-#=================================================
-# REMOVE SERVICE FROM ADMIN PANEL
-#=================================================
-
-if yunohost service status $app >/dev/null 2>&1
-then
-	ynh_print_info "Removing $app service"
-	yunohost service remove $app
-fi
-
-#=================================================
 # REMOVE THE MYSQL DATABASE
 #=================================================
 ynh_script_progression --message="Removing the MySQL database"
