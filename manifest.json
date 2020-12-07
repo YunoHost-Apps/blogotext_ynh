@@ -15,7 +15,7 @@
         "url": "https://miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 3.4"
+        "yunohost": ">= 3.8.1"
     },
     "multi_instance": true,
     "services": [
