@@ -1,7 +1,7 @@
 # BlogoText for YunoHost
 
 [![](https://dash.yunohost.org/integration/blogotext.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)](https://dash.yunohost.org/appci/app/blogotext)  
-[![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=blogotext)
+[![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
