@@ -6,7 +6,7 @@
         "en": "Lightweight Blog-Engine",
 	"fr": "Moteur de blog léger"
     },
-    "version": "3.7.6~ynh5",
+    "version": "3.7.6~ynh6",
     "url": "https://blogotext.org/",
     "license": "MIT",
     "maintainer": {
@@ -15,20 +15,19 @@
         "url": "https://miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 4.2.4"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
         "nginx",
-        "php7.0-fpm",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",
@@ -38,8 +37,7 @@
             },
             {
                 "name": "admin",
-                "type": "user",
-                "example": "johndoe"
+                "type": "user"
             },
             {
                 "name": "is_public",
@@ -58,8 +56,7 @@
             },
             {
                 "name": "password",
-                "type": "password",
-                "example": "Choose a password"
+                "type": "password"
             }
         ]
     }
