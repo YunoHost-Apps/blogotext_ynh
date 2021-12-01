@@ -13,7 +13,17 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 This is BlogoText, the lightweight Blog-Engine.
 
-**Version incluse :** 3.7.6~ynh6
+### Features
+
+- Blog with comments and RSS feeds
+- Links sharing
+- RSS Reader
+- Images/Files uploading and sharing
+- JSON/ZIP/HTML import-export; WordPress import
+- Support Addons
+
+
+**Version incluse :** 3.7.6~ynh5
 
 **Démo :** https://blogotext.org/blog/
 
