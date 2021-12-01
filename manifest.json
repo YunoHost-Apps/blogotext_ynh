@@ -6,7 +6,7 @@
         "en": "Lightweight Blog-Engine",
 	"fr": "Moteur de blog léger"
     },
-    "version": "3.7.6~ynh6",
+    "version": "3.7.6~ynh5",
     "url": "https://blogotext.org/",
     "upstream": {
         "license": "MIT",
