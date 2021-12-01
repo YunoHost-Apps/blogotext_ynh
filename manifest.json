@@ -3,11 +3,18 @@
     "id": "blogotext",
     "packaging_format": 1,
     "description": {
-        "en": "Lightweight Blog-Engine.",
-	"fr": "Moteur de blog léger."
+        "en": "Lightweight Blog-Engine",
+	"fr": "Moteur de blog léger"
     },
-    "version": "3.7.6~ynh4",
+    "version": "3.7.6~ynh5",
     "url": "https://blogotext.org/",
+    "upstream": {
+        "license": "MIT",
+        "website": "https://blogotext.org/",
+        "demo": "https://blogotext.org/blog/",
+        "admindoc": "https://github.com/BlogoText/blogotext/wiki",
+        "code": "https://github.com/BlogoText/blogotext"
+    },
     "license": "MIT",
     "maintainer": {
         "name": "Antoine",
@@ -15,51 +22,33 @@
         "url": "https://miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 4.0.0"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
         "nginx",
-        "php7.0-fpm",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain name for BlogoText",
-                    "fr": "Choisissez un nom de domaine pour BlogoText"
-                },
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",
                 "type": "path",
-                "ask": {
-                    "en": "Choose a path for BlogoText",
-                    "fr": "Choisissez un chemin pour BlogoText"
-                },
                 "example": "/blog",
                 "default": "/blogotext"
             },
             {
                 "name": "admin",
-                "type": "user",
-                "ask": {
-                    "en": "Choose an admin user",
-                    "fr": "Choisissez l’administrateur"
-                },
-                "example": "johndoe"
+                "type": "user"
             },
             {
                 "name": "is_public",
                 "type": "boolean",
-                "ask": {
-                    "en": "Is it a public application?",
-                    "fr": "Est-ce une application publique ?"
-                },
                 "default": true
             },
             {
@@ -74,12 +63,7 @@
             },
             {
                 "name": "password",
-                "type": "password",
-                "ask": {
-                    "en": "Set the administrator password",
-                    "fr": "Définissez le mot de passe administrateur"
-                },
-                "example": "Choose a password"
+                "type": "password"
             }
         ]
     }
