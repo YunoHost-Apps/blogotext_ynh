@@ -1,0 +1,1 @@
+This is BlogoText, the lightweight Blog-Engine.

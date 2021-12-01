@@ -8,6 +8,13 @@
     },
     "version": "3.7.6~ynh6",
     "url": "https://blogotext.org/",
+    "upstream": {
+        "license": "MIT",
+        "website": "https://blogotext.org/",
+        "demo": "https://blogotext.org/blog/",
+        "admindoc": "https://github.com/BlogoText/blogotext/wiki",
+        "code": "https://github.com/BlogoText/blogotext"
+    },
     "license": "MIT",
     "maintainer": {
         "name": "Antoine",
