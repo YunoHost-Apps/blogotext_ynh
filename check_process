@@ -5,7 +5,7 @@
 		admin="john"
 		language="fr"
 		is_public=1
-		password="password1234"
+		password="SomeSuperStrongPassword9284375723"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
