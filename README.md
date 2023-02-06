@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # BlogoText for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Working status](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -33,7 +33,7 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ## Screenshots
 
-![](./doc/screenshots/preview.png)
+![Screenshot of BlogoText](./doc/screenshots/preview.png)
 
 ## Disclaimers / important information
 
@@ -42,21 +42,22 @@ This is BlogoText, the lightweight Blog-Engine.
 How to configure this app: by the admin panel `https://domain.tld/admin`.
 ## Documentation and resources
 
-* Official app website: https://blogotext.org/
-* Official admin documentation: https://github.com/BlogoText/blogotext/wiki
-* Upstream app code repository: https://github.com/BlogoText/blogotext
-* YunoHost documentation for this app: https://yunohost.org/app_blogotext
-* Report a bug: https://github.com/YunoHost-Apps/blogotext_ynh/issues
+* Official app website: <https://blogotext.org/>
+* Official admin documentation: <https://github.com/BlogoText/blogotext/wiki>
+* Upstream app code repository: <https://github.com/BlogoText/blogotext>
+* YunoHost documentation for this app: <https://yunohost.org/app_blogotext>
+* Report a bug: <https://github.com/YunoHost-Apps/blogotext_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/blogotext_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/blogotext_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade blogotext -u https://github.com/YunoHost-Apps/blogotext_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>
