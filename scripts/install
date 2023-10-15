@@ -37,8 +37,6 @@ ynh_add_fpm_config
 #=================================================
 ynh_script_progression --message="Finalizing installation..."
 
-#ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
-# =========== modif perso ===========
 #page 1
 ynh_local_curl "/admin/install.php" "install_form_1_sended=1" "langue=$language"
 #page 2
