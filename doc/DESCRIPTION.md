@@ -1,4 +1,4 @@
-This is BlogoText, the lightweight Blog-Engine.
+BlogoText is a lightweight Blog-Engine.
 
 ### Features
 

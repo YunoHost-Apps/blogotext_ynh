@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # BlogoText pour YunoHost
 
 [![Niveau d’intégration](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+
 [![Installer BlogoText avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Read this readme in english.](./README.md)*
@@ -15,19 +16,18 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-This is BlogoText, the lightweight Blog-Engine.
+BlogoText est un moteur de blog léger.
 
-### Features
+### Caractéristiques
 
-- Blog with comments and RSS feeds
-- Links sharing
-- RSS Reader
-- Images/Files uploading and sharing
-- JSON/ZIP/HTML import-export; WordPress import
-- Support Addons
+- Blog avec commentaires et flux RSS
+- Partage de liens
+- Lecteur RSS
+- Téléchargement et partage d'images/fichiers
+- Import-export JSON/ZIP/HTML ; Importation WordPress
+- Modules complémentaires de support
 
-
-**Version incluse :** 3.7.6~ynh5
+**Version incluse :** 3.7.6~ynh6
 
 **Démo :** https://blogotext.org/blog/
 
@@ -35,17 +35,11 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ![Capture d’écran de BlogoText](./doc/screenshots/preview.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-How to configure this app: by the admin panel `https://domain.tld/admin`.
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://blogotext.org/>
 * Documentation officielle de l’admin : <https://github.com/BlogoText/blogotext/wiki>
 * Dépôt de code officiel de l’app : <https://github.com/BlogoText/blogotext>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_blogotext>
 * Signaler un bug : <https://github.com/YunoHost-Apps/blogotext_ynh/issues>
 
 ## Informations pour les développeurs
