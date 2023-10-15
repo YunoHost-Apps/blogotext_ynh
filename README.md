@@ -16,7 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-This is BlogoText, the lightweight Blog-Engine.
+BlogoText is a lightweight Blog-Engine.
 
 ### Features
 
@@ -28,7 +28,7 @@ This is BlogoText, the lightweight Blog-Engine.
 - Support Addons
 
 
-**Shipped version:** 3.7.6~ynh5
+**Shipped version:** 3.7.6~ynh6
 
 **Demo:** https://blogotext.org/blog/
 
@@ -36,11 +36,6 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ![Screenshot of BlogoText](./doc/screenshots/preview.png)
 
-## Disclaimers / important information
-
-## Configuration
-
-How to configure this app: by the admin panel `https://domain.tld/admin`.
 ## Documentation and resources
 
 * Official app website: <https://blogotext.org/>

@@ -16,19 +16,18 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-This is BlogoText, the lightweight Blog-Engine.
+BlogoText est un moteur de blog léger.
 
-### Features
+### Caractéristiques
 
-- Blog with comments and RSS feeds
-- Links sharing
-- RSS Reader
-- Images/Files uploading and sharing
-- JSON/ZIP/HTML import-export; WordPress import
-- Support Addons
+- Blog avec commentaires et flux RSS
+- Partage de liens
+- Lecteur RSS
+- Téléchargement et partage d'images/fichiers
+- Import-export JSON/ZIP/HTML ; Importation WordPress
+- Modules complémentaires de support
 
-
-**Version incluse :** 3.7.6~ynh5
+**Version incluse :** 3.7.6~ynh6
 
 **Démo :** https://blogotext.org/blog/
 
@@ -36,11 +35,6 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ![Capture d’écran de BlogoText](./doc/screenshots/preview.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-How to configure this app: by the admin panel `https://domain.tld/admin`.
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://blogotext.org/>

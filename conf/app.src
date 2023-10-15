@@ -1,5 +1,0 @@
-SOURCE_URL=https://github.com/BlogoText/blogotext/archive/fa2a4497e76aeb295db1a9d1aa8b7594c7484365.tar.gz
-SOURCE_SUM=14098f6a1d1f1ef9569ddaf79bb2e29fe88b810d6831eb3de620297dea4ee4c2
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
