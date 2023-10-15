@@ -10,80 +10,13 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# MANAGE SCRIPT FAILURE
-#=================================================
-
-#REMOVEME? ynh_abort_if_errors
-
-#=================================================
-# RETRIEVE ARGUMENTS FROM THE MANIFEST
-#=================================================
-
-#REMOVEME? domain=$YNH_APP_ARG_DOMAIN
-#REMOVEME? path=$YNH_APP_ARG_PATH
-#REMOVEME? admin=$YNH_APP_ARG_ADMIN
-#REMOVEME? is_public=$YNH_APP_ARG_IS_PUBLIC
-#REMOVEME? language=$YNH_APP_ARG_LANGUAGE
-#REMOVEME? password=$YNH_APP_ARG_PASSWORD
-
-#REMOVEME? app=$YNH_APP_INSTANCE_NAME
-
-#=================================================
-# CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
-#=================================================
-#REMOVEME? ynh_script_progression --message="Validating installation parameters..."
-
-#REMOVEME? install_dir=/var/www/$app
-#REMOVEME? test ! -e "$install_dir" || ynh_die "This path already contains a folder"
-
-# Register (book) web path
-#REMOVEME? ynh_webpath_register $app $domain $path
-
-#=================================================
-# STORE SETTINGS FROM MANIFEST
-#=================================================
-#REMOVEME? ynh_script_progression --message="Storing installation settings..."
-
-#REMOVEME? ynh_app_setting_set --app=$app --key=domain --value=$domain
-#REMOVEME? ynh_app_setting_set --app=$app --key=path --value=$path
-#REMOVEME? ynh_app_setting_set --app=$app --key=admin --value=$admin
-ynh_app_setting_set --app=$app --key=language --value=$language
-
-#=================================================
-# INSTALL DEPENDENCIES
-#=================================================
-#REMOVEME? ynh_script_progression --message="Installing dependencies..." --weight=1
-
-#REMOVEME? ynh_install_app_dependencies $pkg_dependencies
-
-#=================================================
-# CREATE A MYSQL DATABASE
-#=================================================
-#REMOVEME? ynh_script_progression --message="Creating a MySQL database..."
-
-#REMOVEME? db_name=$(ynh_sanitize_dbid $app)
-#REMOVEME? db_user=$db_name
-#REMOVEME? ynh_app_setting_set --app=$app --key=db_name --value=$db_name
-#REMOVEME? ynh_mysql_setup_db --db_user=$db_name --db_name=$db_name
-
-#=================================================
-# CREATE DEDICATED USER
-#=================================================
-#REMOVEME? ynh_script_progression --message="Configuring system user..."
-
-# Create a system user
-#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir"
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression --message="Setting up source files..."
 
-#REMOVEME? ynh_app_setting_set $app install_dir $install_dir
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source "$install_dir"
 
-chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
@@ -95,11 +28,6 @@ ynh_script_progression --message="Configuring NGINX web server..."
 # Create a dedicated nginx config
 ynh_add_nginx_config
 
-#=================================================
-# PHP-FPM CONFIGURATION
-#=================================================
-ynh_script_progression --message="Configuring PHP-FPM..."
-
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
 #REMOVEME? phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
@@ -107,13 +35,6 @@ ynh_add_fpm_config
 #=================================================
 # SETUP APPLICATION WITH CURL
 #=================================================
-
-# Set the app as temporarily public for cURL call
-#REMOVEME? ynh_permission_update --permission "main" --add "visitors"
-
-# Reload NGINX
-#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
-
 ynh_script_progression --message="Finalizing installation..."
 
 #ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
@@ -124,24 +45,6 @@ ynh_local_curl "/admin/install.php" "install_form_1_sended=1" "langue=$language"
 ynh_local_curl "/admin/install.php?s=2&l=$language" "identifiant=$admin" "mdp=$password" "racine=https://$domain$path/" "comm_defaut_status=1" "langue=$language" "install_form_2_sended=1"
 #page 3
 ynh_local_curl "/admin/install.php?s=3&l=$language" "sgdb=mysql" "mysql_user=$db_user" "mysql_passwd=$db_pwd" "mysql_db=$db_name" "mysql_host=localhost" "langue=$language" "install_form_3_sended=1"
-
-#=================================================
-# SETUP SSOWAT
-#=================================================
-ynh_script_progression --message="Configuring SSOwat..."
-
-# Make app public if necessary or protect it
-#REMOVEME? if [ $is_public -eq 0 ]
-then
-#REMOVEME? 	ynh_permission_update --permission="main" --remove="visitors"
-fi
-
-#=================================================
-# RELOAD NGINX
-#=================================================
-#REMOVEME? ynh_script_progression --message="Reloading NGINX web server..."
-
-#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT
