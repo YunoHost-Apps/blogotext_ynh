@@ -16,7 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-This is BlogoText, the lightweight Blog-Engine.
+BlogoText is a lightweight Blog-Engine.
 
 ### Features
 
