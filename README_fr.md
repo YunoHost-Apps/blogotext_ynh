@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # BlogoText pour YunoHost
 
 [![Niveau d’intégration](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+
 [![Installer BlogoText avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
 *[Read this readme in english.](./README.md)*
@@ -45,7 +46,6 @@ How to configure this app: by the admin panel `https://domain.tld/admin`.
 * Site officiel de l’app : <https://blogotext.org/>
 * Documentation officielle de l’admin : <https://github.com/BlogoText/blogotext/wiki>
 * Dépôt de code officiel de l’app : <https://github.com/BlogoText/blogotext>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_blogotext>
 * Signaler un bug : <https://github.com/YunoHost-Apps/blogotext_ynh/issues>
 
 ## Informations pour les développeurs
