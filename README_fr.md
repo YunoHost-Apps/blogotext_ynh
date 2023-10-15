@@ -28,7 +28,7 @@ This is BlogoText, the lightweight Blog-Engine.
 - Support Addons
 
 
-**Version incluse :** 3.7.6~ynh5
+**Version incluse :** 3.7.6~ynh6
 
 **Démo :** https://blogotext.org/blog/
 
