@@ -36,11 +36,6 @@ This is BlogoText, the lightweight Blog-Engine.
 
 ![Capture d’écran de BlogoText](./doc/screenshots/preview.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-How to configure this app: by the admin panel `https://domain.tld/admin`.
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://blogotext.org/>
