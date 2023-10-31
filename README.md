@@ -41,6 +41,7 @@ BlogoText is a lightweight Blog-Engine.
 * Official app website: <https://blogotext.org/>
 * Official admin documentation: <https://github.com/BlogoText/blogotext/wiki>
 * Upstream app code repository: <https://github.com/BlogoText/blogotext>
+* YunoHost Store: <https://apps.yunohost.org/app/blogotext>
 * Report a bug: <https://github.com/YunoHost-Apps/blogotext_ynh/issues>
 
 ## Developer info
