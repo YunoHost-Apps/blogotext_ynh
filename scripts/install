@@ -30,7 +30,6 @@ ynh_add_nginx_config
 
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
-#REMOVEME? phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # SETUP APPLICATION WITH CURL
