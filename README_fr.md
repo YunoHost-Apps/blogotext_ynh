@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # BlogoText pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/blogotext)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/blogotext)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/blogotext)
 
 [![Installer BlogoText avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
@@ -27,7 +29,8 @@ BlogoText est un moteur de blog léger.
 - Import-export JSON/ZIP/HTML ; Importation WordPress
 - Modules complémentaires de support
 
-**Version incluse :** 3.7.6~ynh6
+
+**Version incluse :** 3.7.6~ynh7
 
 **Démo :** <https://blogotext.org/blog/>
 

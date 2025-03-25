@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # BlogoText for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Working status](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/blogotext)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+![Working status](https://apps.yunohost.org/badge/state/blogotext)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/blogotext)
 
 [![Install BlogoText with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
@@ -28,7 +30,7 @@ BlogoText is a lightweight Blog-Engine.
 - Support Addons
 
 
-**Shipped version:** 3.7.6~ynh6
+**Shipped version:** 3.7.6~ynh7
 
 **Demo:** <https://blogotext.org/blog/>
 

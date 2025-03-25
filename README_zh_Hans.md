@@ -5,7 +5,9 @@
 
 # YunoHost 上的 BlogoText
 
-[![集成程度](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![工作状态](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/blogotext)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+![工作状态](https://apps.yunohost.org/badge/state/blogotext)
+![维护状态](https://apps.yunohost.org/badge/maintained/blogotext)
 
 [![使用 YunoHost 安装 BlogoText](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
@@ -28,7 +30,7 @@ BlogoText is a lightweight Blog-Engine.
 - Support Addons
 
 
-**分发版本：** 3.7.6~ynh6
+**分发版本：** 3.7.6~ynh7
 
 **演示：** <https://blogotext.org/blog/>
 
