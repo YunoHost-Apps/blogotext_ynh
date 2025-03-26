@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "blogotext"
@@ -5,7 +7,7 @@ name = "BlogoText"
 description.en = "Lightweight Blog-Engine"
 description.fr = "Moteur de blog léger"
 
-version = "3.7.6~ynh6"
+version = "3.7.6~ynh7"
 
 maintainers = ["Antoine"]
 
@@ -34,9 +36,6 @@ ram.runtime = "50M"
     type = "path"
     default = "/blogotext"
 
-    [install.admin]
-    type = "user"
-
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -48,14 +47,17 @@ ram.runtime = "50M"
     choices = ["fr", "en"]
     default = "fr"
 
+    [install.admin]
+    type = "user"
+
     [install.password]
     type = "password"
 
 [resources]
-        [resources.sources.main]
-        url = "https://github.com/BlogoText/blogotext/archive/fa2a4497e76aeb295db1a9d1aa8b7594c7484365.tar.gz"
-        sha256 = "14098f6a1d1f1ef9569ddaf79bb2e29fe88b810d6831eb3de620297dea4ee4c2"
-        autoupdate.strategy = "latest_github_release"
+    [resources.sources.main]
+    url = "https://github.com/BlogoText/blogotext/archive/fa2a4497e76aeb295db1a9d1aa8b7594c7484365.tar.gz"
+    sha256 = "14098f6a1d1f1ef9569ddaf79bb2e29fe88b810d6831eb3de620297dea4ee4c2"
+    autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
 

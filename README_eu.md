@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # BlogoText YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/blogotext.svg)](https://dash.yunohost.org/appci/app/blogotext) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/blogotext.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/blogotext.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/blogotext)](https://ci-apps.yunohost.org/ci/apps/blogotext/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/blogotext)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/blogotext)
 
 [![Instalatu BlogoText YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=blogotext)
 
@@ -28,7 +30,7 @@ BlogoText is a lightweight Blog-Engine.
 - Support Addons
 
 
-**Paketatutako bertsioa:** 3.7.6~ynh6
+**Paketatutako bertsioa:** 3.7.6~ynh7
 
 **Demoa:** <https://blogotext.org/blog/>
 
@@ -52,7 +54,7 @@ BlogoText is a lightweight Blog-Engine.
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/blogotext_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/blogotext_ynh/tree/testing --debug
